@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BMW Mini Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img src="/static/mini_logo.png" alt="MINI Logo" /></div>
+        <div id="chat-box"></div>
+        <div class="input-area">
+            <input type="text" id="question" placeholder="질문을 입력하세요..." />
+            <button id="send">➤</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('send').onclick = async function () {
+            const q = document.getElementById('question').value;
+            const res = await fetch('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question: q })
+            });
+            const data = await res.json();
+            const chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML += `<div class="msg user">🙋‍♂️ ${q}</div>`;
+            chatBox.innerHTML += `<div class="msg bot">🤖 ${data.answer}</div>`;
+            if (data.image_urls.length > 0) {
+                data.image_urls.forEach(url => {
+                    chatBox.innerHTML += `<img src="${url}" class="chat-img" />`;
+                });
+            }
+        }
+    </script>
+</body>
+</html>

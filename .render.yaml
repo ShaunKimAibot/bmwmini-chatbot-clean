@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: bmwmini-chatbot
+    env: python
+    buildCommand: ""
+    startCommand: "sh start.sh"
+    plan: free
