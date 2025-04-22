@@ -4,3 +4,4 @@ jinja2
 supabase
 langchain
 langchain-openai
+langchain-community
