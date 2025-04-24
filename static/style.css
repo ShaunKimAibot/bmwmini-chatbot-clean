@@ -1,8 +1,45 @@
-body { font-family: sans-serif; background: white; margin: 0; }
-.container { max-width: 800px; margin: auto; padding: 2rem; text-align: center; }
-.logo img { width: 100px; margin-bottom: 1rem; }
-.input-area { display: flex; justify-content: center; margin-top: 2rem; }
-#question { width: 70%; padding: 0.5rem; font-size: 1rem; }
-#send { background: black; color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 1.2rem; margin-left: 1rem; cursor: pointer; }
-.msg { margin: 1rem 0; }
-.chat-img { max-width: 100%; margin-top: 1rem; }
+body { 
+    font-family: sans-serif;
+    background: white;
+    margin: 0;
+}
+.container {
+    max-width: 800px;
+    margin: auto; 
+    padding: 2rem; 
+    text-align: center; 
+}
+.logo img { 
+    width: 100px; 
+    margin-bottom: 1rem; 
+}
+.input-area { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 2rem; 
+}
+#question { 
+    width: 70%; 
+    padding: 0.5rem; 
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 1px solid #999;
+}
+#send { 
+    background: black; 
+    color: white; 
+    border: none; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    font-size: 1.2rem; 
+    margin-left: 1rem; 
+    cursor: pointer; 
+}
+.msg { 
+    margin: 1rem 0; 
+}
+.chat-img { 
+    max-width: 100%; 
+    margin-top: 1rem; 
+}
